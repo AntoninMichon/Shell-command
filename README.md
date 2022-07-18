@@ -1,3 +1,7 @@
-<p align-font=center>Script Shell for basic command</p>
-</br>
-<p color="red">Use bash xxxxx.sh for execute one of these command</p>
+> #### Shell basics command
+>
+> - Easy to use
+> - Save Time
+> - No syntaxe error
+>
+> Run `bash xxxxx.sh` for use these script
