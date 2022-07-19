@@ -13,7 +13,7 @@ elif [ $entrer_utilisateur == 2 ]; then
 
 elif [ $entrer_utilisateur == 3 ]; then
     df -h --output=source,fstype
-
+gi
 elif [ $entrer_utilisateur == 4 ]; then
     df -ha
 
