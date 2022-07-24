@@ -1,22 +1,30 @@
-#! /bin/bash
+#!/usr/bin/env python
 
-echo -e "Choisissez une option ci dessous : \n"
+import os
 
-echo -e "\n1 => Nom du disque et espace utilisé\n2 => Nom du disque et taille total\n3 => Nom du disque et système de fichier\n4 => Toutes les informations"
-read entrer_utilisateur
+print("Choisissez une option ci dessous : \n")
+usr = int(input("\n[ 1 ] : Nom du disque et espace utilisé\n[ 2 ] : Nom du disque et taille total\n[ 3 ] : Nom du disque et système de fichier\n[ 4 ] : Toutes les informations\n[ 5 ] : Quitter\n=>"))
+while True :
+    print("\n\n")
+    if usr == 1 :
+        os.system("df -h --output=source,used")
 
-if [ $entrer_utilisateur == 1 ]; then
-    df -h --output=source,used
+    if usr == 2 :
+        os.system("df -h --output=source,size")
 
-elif [ $entrer_utilisateur == 2 ]; then
-    df -h --output=source,size
+    if usr == 3 :
+        os.system("df -h --output=source,fstype")
 
-elif [ $entrer_utilisateur == 3 ]; then
-    df -h --output=source,fstype
-gi
-elif [ $entrer_utilisateur == 4 ]; then
-    df -ha
+    if usr == 4 :
+        os.system("df -ha")
+    
+    if usr == 5 :
+        break
 
-else 
-    echo "Les chiifres disponible sont 1, 2, 3 et 4. Erreur d'entrée"
-fi
+    else :
+        print("L'option choisit est inexistante, veuillez rééssayer.")
+    
+    usr = int(input("\n[ 1 ] : Nom du disque et espace utilisé\n[ 2 ] : Nom du disque et taille total\n[ 3 ] : Nom du disque et système de fichier\n[ 4 ] : Toutes les informations\n[ 5 ] : Quitter\n=>"))
+
+fin = input("Appuyer sur entrée pour quitter...")
+exit()
