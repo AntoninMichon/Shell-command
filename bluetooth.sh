@@ -1,4 +1,4 @@
-#! /bin/share
+#! /bin/bash
 
 power_on() {
     echo "power on" | bluetoothctl | grep "done" | cut -d " " -f 2
